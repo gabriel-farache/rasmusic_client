@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .gradle
 /local.properties
 /.idea/workspace.xml
@@ -5,6 +6,7 @@
 .DS_Store
 /build
 /captures
+=======
 # Built application files
 *.apk
 *.ap_
@@ -45,3 +47,4 @@ captures/
 
 # Keystore files
 *.jks
+>>>>>>> d7aa1956c050819b283eba61171e528e69578709
