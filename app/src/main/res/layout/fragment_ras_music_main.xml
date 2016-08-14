@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_ras_music_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".main.RasMusicMainFragment">
+
+
+    <Button
+        android:id="@+id/serverAddrValBtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/serverAddrValue"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:gravity="fill_vertical|right"
+        android:text="Ok" />
+
+    <EditText
+        android:id="@+id/serverAddrValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@id/serverAddrValBtn"
+        android:hint="Server Address"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/songPathValue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/serverAddrValue"
+        android:layout_marginTop="20dp"
+        android:layout_toStartOf="@+id/searchBtn"
+        android:hint="Song to add/play"
+        android:layout_marginBottom="10dp"
+        android:autoText="false"
+        android:editable="true"
+        android:enabled="true"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/addAndPlayBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/songPathValue"
+        android:text="@string/addAndPlayBtnName" />
+
+    <Button
+        android:id="@+id/addToPlaylistBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/songPathValue"
+        android:text="@string/addToPlaylistBtnName" />
+
+    <ImageButton
+        android:id="@+id/playPauseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ffffff"
+        android:src="@drawable/play_black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/addAndPlayBtn"
+        android:layout_toEndOf="@+id/addAndPlayBtn"
+        android:layout_marginTop="10dp" />
+
+    <ImageButton
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ffffff"
+        android:src="@drawable/next_black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_above="@+id/soundLevel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <ImageButton
+        android:id="@+id/stopBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ffffff"
+        android:src="@drawable/stop_black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignTop="@+id/nextBtn"
+        android:layout_alignStart="@+id/addToPlaylistBtn" />
+
+    <ImageButton
+        android:id="@+id/soundDownBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ffffff"
+        android:src="@drawable/volume_low_black"
+        android:layout_alignTop="@+id/soundLevel"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="10dp" />
+
+    <ImageButton
+        android:id="@+id/soundUpBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playlist"
+        android:layout_alignParentEnd="true"
+        android:background="#00ffffff"
+        android:src="@drawable/volume_high_black"
+        android:layout_marginLeft="10dp" />
+
+    <SeekBar
+        android:id="@+id/soundLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playPauseBtn"
+        android:layout_toEndOf="@+id/soundDownBtn"
+        android:layout_toStartOf="@id/soundUpBtn"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="75"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+
+
+    <ImageButton
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/songPathValue"
+        android:background="#00ffffff"
+        android:src="@drawable/search_black" />
+
+    <ListView
+        android:id="@+id/playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/soundDownBtn"
+        android:layout_marginTop="30dp" />
+
+</RelativeLayout>
